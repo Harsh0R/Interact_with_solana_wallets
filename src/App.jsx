@@ -2,13 +2,22 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import WalletContextProvider from './Context/WalletContextProvider'
+import BalanceDisplay from './Components/BalanceDisplay'
+import SendSolForm from './Components/SendSolForm'
+import AppBar from './Components/AppBar'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      App
+      <WalletContextProvider>
+        <AppBar />
+        <div>
+          <BalanceDisplay />
+          <SendSolForm />
+        </div>
+      </WalletContextProvider >
     </>
   )
 }
