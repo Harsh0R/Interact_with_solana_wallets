@@ -28,7 +28,7 @@ const BalanceDisplay = () => {
 
   return (
     <div>
-      <p>{publicKey ? `Balance: ${balance / LAMPORTS_PER_SOL}` : ''}</p>
+      <p>{publicKey ? `Balance: ${balance / LAMPORTS_PER_SOL}` : 'Connect ur wallet first'}</p>
     </div>
   )
 }
